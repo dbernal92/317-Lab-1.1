@@ -1,9 +1,17 @@
 // @ts-check
+// Within the Vehicle class:
+// Add appropriate types for all current Vehicle properties and method parameters.
+// For "status," use a union of literals to declare valid status options:
+// "started" or "stopped"
 
 class Vehicle {
   status = "stopped";
+  
+  make: string
+  model: string
+  wheels: number
 
-  constructor(make, model, wheels) {
+  constructor(make: string, model: string, wheels: number) {
     this.make = make;
     this.model = model;
     this.wheels = wheels;
@@ -18,7 +26,7 @@ class Vehicle {
 
 class Car extends Vehicle {
   constructor(make, model) {
-    super(make, model, "four");
+    super(make, model, 4);
   }
 }
 
